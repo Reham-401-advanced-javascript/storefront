@@ -18,6 +18,7 @@ const useStyles = makeStyles({
 
 const Products = props => {
   const classes = useStyles();
+  console.log('nnnnnnnnnnnnnnnnnnnn',props);
   
   return (
     <>
@@ -26,23 +27,23 @@ const Products = props => {
         <p className='cd'>Category Description Goes Here</p>
       </div>
       <GridList cellHeight={350} className={classes.gridList} cols={3}>
-        {props.products.products.map((cat)=>
-          <Card className={classes.root} key={cat.name}>
+        {props.products.products.map((category)=>
+          <Card className={classes.root} key={category.name}>
       
             <CardActionArea>
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
                 height="180"
-                image={cat.image}
+                image={category.image}
                 title="Contemplative Reptile"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {cat.name}
+                  {category.name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-            Price: {cat.price}$ - inStock: {cat.inStock}
+            Price: {category.price}$ - inStock: {category.inStock}
                 </Typography>
               </CardContent>
             </CardActionArea>

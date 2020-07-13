@@ -72,12 +72,12 @@ const Categories = props => {
         </Tabs> */}
        
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"  centered>
-          {props.counter.categories.map((cat) =>
+          {props.counter.categories.map((category) =>
             <Tab
               div="true"
-              onClick={() => props.productBaseCategory(cat.name)}
-              key={cat.displayName}
-              label={cat.displayName}  />,
+              onClick={() => props.productBaseCategory(category.name)}
+              key={category.displayName}
+              label={category.displayName}  />,
                            
           )}
         </Tabs>
@@ -87,7 +87,7 @@ const Categories = props => {
   );
 };
 
-
+//As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs. I
 
 const mapStateToProps = state => ({
   counter: state.product,
@@ -95,5 +95,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = { productBaseCategory };
 
+// connect :it listen to the store 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Categories);
