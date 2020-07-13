@@ -1,12 +1,20 @@
 import React from 'react';
-import Status from './components/status';
-import Votes from './components/vote-counter';
+import Header from './components/header.js';
+import Footer from './components/footer.js';
+import Categories from './components/category.js';
+import Products from './components/product.js';
+import './app.scss';
 function App() {
   return (
     <>
-      <h1>Redux!</h1>
-      <Votes />
-      <Status />
+      
+
+      <Header />
+      <Categories />
+      <Products />
+      <Footer />
+      
+
     </>
   );
 }

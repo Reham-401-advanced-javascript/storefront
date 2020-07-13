@@ -1,11 +1,11 @@
 import { createStore, combineReducers } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import votes from './votes';
+// import { composeWithDevTools } from 'redux-devtools-extension';
+import product from './categories.js';
 
-const rootReducer = combineReducers({ votes });
+const rootReducer = combineReducers({ product });
 
 const store = () => {
-  return createStore(rootReducer, composeWithDevTools());
+  return createStore(rootReducer);
 };
 
 export default store();
