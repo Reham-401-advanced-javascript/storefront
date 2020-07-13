@@ -33,7 +33,7 @@ export default (state = initialState, action) => {
   }
 };
 
-// Actions
+// Actionsss
 // Actions are objects with type and payload
 export const productBaseCategory = (name) => {
   return {
