@@ -16,7 +16,8 @@ const initialState = {
   ],
   activeCategory: '',
 };
-// Reducers take in 2 inputs (state and action) the default for state will be the initState
+
+// Reducers take in 2 inputs (state and action) the default for state will be the initState.
 // its just a switch case statement
 export default (state = initialState, action) => {
   const { type, payload } = action;
